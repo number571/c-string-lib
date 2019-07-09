@@ -1,2 +1,22 @@
 # CStringLIB
-Extended string library for programming language C.
+> Extended string library for programming language C.
+
+### Example
+```c
+#include <stdio.h>
+#include "string/init.h"
+
+int main(void) {
+	String * str = init_string("hello, world!");
+	replace_string(str, "world", "string type");
+	printf("%s\n", str->chars);
+	free_string(str);
+	return 0;
+}
+```
+
+### Run
+```
+$ gcc -o main main.c string/init.c 
+$ ./main
+```
