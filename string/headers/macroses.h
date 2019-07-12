@@ -18,6 +18,11 @@
     String*: split_type_string\
 )(X, Y, Z)
 
+#define delete_string(X, Y) _Generic((Y),\
+    char*: delete_type_chars,\
+    String*: delete_type_string\
+)(X, Y)
+
 #define slice_string(X, Y, MIN, MAX) _Generic((Y),\
     char*: slice_type_chars,\
     String*: slice_type_string\
@@ -47,11 +52,6 @@
     char*: length_type_chars,\
     String*: length_type_string\
 )(X)
-
-#define delete_string(X, Y) _Generic((Y),\
-    char*: delete_type_chars,\
-    String*: delete_type_string\
-)(X, Y)
 
 #define compare_string(X, Y) _Generic((Y),\
     char*: compare_type_chars,\
