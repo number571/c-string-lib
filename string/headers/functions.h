@@ -31,5 +31,8 @@ extern bool has_contain_type_chars(String * string, char * pattern);
 extern size_t count_type_string(String * string, String * pattern);
 extern size_t count_type_chars(String * string, char * pattern);
 
+extern size_t length_type_string(String * string);
+extern size_t length_type_chars(char * chars);
+
 extern int compare_type_chars(String * string, char * chars);
 extern int compare_type_string(String * string1, String * string2);
