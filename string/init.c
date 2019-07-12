@@ -62,7 +62,7 @@ static void expension_string(String * str, char * buffer) {
 static void replace_template(String * str, char * repl, char * torepl) {
     char * buffer = (char*)malloc(str->cap * sizeof(char));
     char * p_buff = buffer;
-    for (size_t i = 0, x = 0; i < str->len; ++i) {
+    for (size_t i = 0, x = 0; i < str->len + 1; ++i) {
         if ((p_buff - buffer) == (str->cap - 1)) {
             expension_string(str, buffer);
         }
