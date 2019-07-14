@@ -1,6 +1,15 @@
 # CStringLIB
 > Extended string library for programming language C.
 
+### String type
+```c
+typedef struct String {
+	char * chars;
+	size_t len;
+	size_t cap;
+} String;
+```
+
 ### Example
 ```c
 #include <stdio.h>
