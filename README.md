@@ -10,7 +10,7 @@ typedef struct String {
 } String;
 ```
 
-### Example
+### Example :
 ```c
 #include <stdio.h>
 #include "string/init.h"
